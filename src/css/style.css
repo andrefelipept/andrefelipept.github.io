@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: black;
+  background: linear-gradient(to bottom, #333 0%, #FFD700 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  width: 100%;
+  height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.col {
+  
+}
+
+.left {
+  padding: 30px;
+  background-color: #333;
+  color: #FFD700;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.left h2 {
+  padding: 80px;
+  text-align: center;
+}
+
+.left ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.left ul li {
+  margin-bottom: 8px;
+}
+
+.middle {
+  background-color: #FFD700;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  
+}
+
+.middle img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.middle .descricao {
+  margin: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  max-width: 73%;
+  margin-top: 10px;
+}
+
+.middle .contato {
+  margin: 20px;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.right {
+  background-color: #FFD700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  transform-origin: center;
+  text-orientation: mixed;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.right .frase {
+  font-size: 12px;
+  font-weight: normal;
+  font-family: Arial, sans-serif;
+  text-transform: none;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .right {
+    writing-mode: horizontal-tb;
+    direction: ltr;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .right .frase {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  .middle img {
+    width: 100%;
+    height: auto;
+  }
+
+  .middle {
+    align-items: center;
+    text-align: center;
+  }
+}
