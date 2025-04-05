@@ -121,7 +121,7 @@ body {
 
   .right {
     writing-mode: horizontal-tb;
-    direction: ltr;
+    transform: none;
     font-size: 20px;
     text-align: center;
   }
